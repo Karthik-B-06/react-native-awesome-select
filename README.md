@@ -11,18 +11,18 @@ A multiselect component with zero dependencies.
 ## Usage
 
 ```javascript
-import React, { Component } from "react";
+import React from "react";
 import { View } from "react-native";
 import AwesomeSelect from "react-native-awesome-select";
 
 const data = [
   {
     name: "First item",
-    selected: false
+    isActive: false
   },
   {
     name: "Second item",
-    selected: false
+    isActive: false
   }
 ];
 
@@ -30,8 +30,8 @@ export default function App() {
   return (
     <View>
       <AwesomeSelect
-        data={data}
-        onValueChange={value => console.log(value)}
+        data={ data }
+        onValueChange={ value => console.log(value) }
       />
     </View>
   );
@@ -40,9 +40,9 @@ export default function App() {
 
 ## Props
 
-| Prop          | Type     | Optional | Default   | Description                                           |
-| ------------- | -------- | -------- | --------- | ----------------------------------------------------- |
-| data          | array    | No       | undefined | Data array that will be passed and displayed          |
-| onValueChange | function | Yes      |           | Callback called when value has been changed           |
-| activeStyle   | style    | Yes      |           | The style applied to the elements with active state   |
-| inactiveStyle | style    | Yes      |           | The style applied to the elements with inactive state |
+| Prop          | Type     | Description                                           |
+| ------------- | -------- | ----------------------------------------------------- |
+| data          | array    | Data array that will be passed and displayed          |
+| onValueChange | function | Callback called when value has been changed           |
+| activeStyle   | style    | The style applied to the elements with active state   |
+| inactiveStyle | style    | The style applied to the elements with inactive state |
